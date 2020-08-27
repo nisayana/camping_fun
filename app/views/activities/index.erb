@@ -1,3 +1,8 @@
 <h2>Here are All the Activities</h2>
 
 <%# Display a list all of the activities %>
+<ul>
+<% @activities.map do |a_var| %>
+    <li> <%= link_to a_var.name.titleize, activity_path(a_var) %>
+    <% end %>
+</ul>
