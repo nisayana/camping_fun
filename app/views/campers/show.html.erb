@@ -1,6 +1,9 @@
-<h1>
+<h1>Camper Information</h1>
 <%= @camper.full_name_and_age %>
 
-<%= byebug
-@camper.activities %>
-</h1>
+<ul>
+<% @camper.activities.map do |activity_var| %>
+<li><%= activity_var.name + " " + activity_var.difficulty.to_s %></li>
+<% end %>
+</ul>
+
